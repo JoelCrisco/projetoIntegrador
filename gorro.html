@@ -7,6 +7,11 @@
       name="description"
       content="McLaren Outlet: Exclusividade e desempenho ao seu alcance."
     />
+    <!-- Link do Bootstrap 5 -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <title>Gorro McLaren</title>
     <link rel="stylesheet" href="Styles CSS/mobile-product.css" />
     <link rel="stylesheet" href="Styles CSS/desktop-product.css" />
@@ -23,7 +28,7 @@
 
   <body>
     <main>
-      <header>
+      <header></header>
         <!--NAV CONTENDO O LOGIN, MENU E A BARRA DE PESQUISAR -->
         <nav>
           <div id="login">
@@ -42,10 +47,15 @@
               Menu
             </button>
             <div id="myDropdown" class="dropdown-content">
-              <a href="login-McLaren/login.html" target="_blank">Login</a>
-              <a href="carrinho.html" target="_blank">Carrinho</a>
+              <a href="login-McLaren/login.html" target="_blank"
+                ><img src="Images/user.png" alt="img login" /> Login</a
+              >
+              <a href="carrinho.html" target="_blank"
+                ><img src="Images/carrinho.png" alt="img carrinho" />
+                Carrinho</a
+              >
               <a href="sobre-empresa-McLaren/sobre-McLaren.html" target="_blank"
-                >Sobre nós</a
+                ><img src="Images/group.png" alt="img sobre-nos" /> Sobre nós</a
               >
             </div>
           </div>
@@ -58,24 +68,29 @@
         </nav>
       </header>
       <section>
-        <!--ANUNCIO Jaqueta-->
+        <!--ANUNCIO Gorro -->
         <div class="container">
           <button class="voltar" onclick="window.location.href='index.html';">
             <img src="Images/arrow.png" alt="Voltar" />
           </button>
 
-          <div class="product-item">
-            <a href="bone-mclaren.html">
-              <img src="Images/gorro.png" alt="Gorro McLaren" />
-              <h3>Gorro McLaren<br /><span class="price">R$70,00</span></h3>
-              <label class="qtd" for="produto-quantidade">Quantidade: </label>
-              <input type="number" min="1" id="produto-quantidade" value="1" />
-              <a class="botoes" href="carrinho.html">
-                <button onclick="adicionarProduto()" class="add-cart">
-                  Adicionar ao carrinho
-                </button>
-              </a>
+          <div class="product-item" data-preco="70.00">
+            <a href="gorro.html">
+              <img src="Images/gorro.png" alt="Gorro McLaren"/>
+              <h3>
+                Gorro McLaren<br><span class="price">R$80,00</span>
+              </h3>
             </a>
+            <label class="qtd" for="produto-quantidade">Quantidade: </label>
+            <input
+              type="number"
+              min="1"             
+              id="produto-quantidade"
+              value="1"
+            />
+            <button onclick="adicionarProduto()" class="add-cart">
+              Adicionar ao carrinho
+            </button>
           </div>
         </div>
       </section>
